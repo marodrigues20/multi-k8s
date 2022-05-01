@@ -6,7 +6,7 @@ env:
   global:
     - SHA=$(git rev-parse HEAD)
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
-before_install: 
+before_install:
   - openssl aes-256-cbc -K $encrypted_4491bbd041e7_key -iv $encrypted_4491bbd041e7_iv -in multi-k8s-348609-28ed82e4ae1c.json.enc -out multi-k8s-348609-28ed82e4ae1c.json -d
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
